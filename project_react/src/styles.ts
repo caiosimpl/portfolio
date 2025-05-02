@@ -5,14 +5,15 @@ const EstiloGlobal = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
+    list-style: none;
   }
 
   body {
     padding-top: 80px;
 
-     @media (max-width: 768px) {
-        padding-top: 16px;
-     }
+    @media (max-width: 768px) {
+      padding-top: 16px;
+    }
   }
 `
 export default EstiloGlobal
@@ -31,10 +32,11 @@ export const Container = styled.div`
   }
 
   img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      height: auto;
+    }
   }
-}
 `
