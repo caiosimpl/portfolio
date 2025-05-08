@@ -4,7 +4,11 @@ import Title from '../../componets/title'
 
 import { Desc, ProfileButton, SidebarContainer } from './styles'
 
-const Sidebar = () => (
+type Props = {
+  changeTheme: () => void
+}
+
+const Sidebar = (props: Props) => (
   <aside>
     <SidebarContainer>
       <Avatar />
@@ -15,7 +19,7 @@ const Sidebar = () => (
       <Desc tipo="main" fontSize={12}>
         Full-stack Engineer
       </Desc>
-      <ProfileButton>Change theme</ProfileButton>
+      <ProfileButton onClick={props.changeTheme}>Change theme</ProfileButton>
     </SidebarContainer>
   </aside>
 )
